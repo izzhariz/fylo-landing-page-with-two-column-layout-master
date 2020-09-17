@@ -358,6 +358,8 @@ form {
     color: #fff;
     border-radius: 6px;
     border-style: none;
+    border: 2px solid $brightBlue;
+
     cursor: pointer;
     &:hover {
       border: 2px solid $brightBlue;

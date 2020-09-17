@@ -10,6 +10,33 @@ $cyan: hsl(170, 45%, 43%);
 $grayBlue: hsl(240, 75%, 98%);
 $gray: hsl(0, 0%, 75%);
 
+// Media Queries
+//small phones
+$phones: 600px;
+// Small tablets and large smartphones (landscape view)
+$tablet: 768px;
+// Tablets and small desktops
+$desktop: 1024px;
+
+//phones
+@mixin phones {
+  @media (max-width: #{$phones}) {
+    @content;
+  }
+}
+// tablets
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+// small desktop
+@mixin desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -31,6 +58,8 @@ p {
   max-width: 1440px;
   min-width: 375px;
   margin: auto;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 // Navbar
@@ -41,6 +70,7 @@ p {
   nav {
     ul {
       text-decoration: none;
+      padding-inline-start: 0;
       li {
         display: inline-block;
         margin-left: 3em;
@@ -50,6 +80,21 @@ p {
           color: $cyan;
         }
       }
+    }
+  }
+  @include desktop {
+    padding-top: 2em;
+    .logo a img {
+      margin-top: 0.8em;
+      width: 130px;
+    }
+  }
+  @include phones {
+    .logo a img {
+      width: 100px;
+    }
+    nav ul li {
+      margin-left: 1em;
     }
   }
 }
@@ -76,6 +121,27 @@ p {
     margin: 3em 0;
     img {
       width: 100%;
+    }
+  }
+  @include desktop {
+    margin-top: 2em;
+    .section-one {
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+  @include tablet {
+    flex-direction: column-reverse;
+    text-align: center;
+    .section-one {
+      max-width: 800px;
+      p {
+        max-width: 100%;
+      }
     }
   }
 }
@@ -108,13 +174,27 @@ form {
       background: #fff;
     }
   }
+  @include tablet {
+    flex-direction: column;
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+    input {
+      width: 95%;
+    }
+    .btn {
+      width: 100%;
+      margin-top: 1em;
+      margin-left: 0;
+    }
+  }
 }
 
 // Container Part 2
 .second-sub {
   display: flex;
   align-items: center;
-
   .section-two {
     flex-basis: 50%;
     max-width: 720px;
@@ -177,6 +257,36 @@ form {
       width: 100%;
     }
   }
+  @include desktop {
+    .section-two {
+      h2 {
+        font-size: 2em;
+        max-width: 400px;
+      }
+    }
+  }
+  @include tablet {
+    flex-direction: column-reverse;
+    .section-two {
+      h2 {
+        font-size: 1.5em;
+        text-align: center;
+        max-width: 100%;
+        padding-bottom: 1em;
+      }
+      .fylo-link {
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        a {
+          border-bottom: 1px solid $cyan;
+        }
+      }
+      .testimonial {
+        margin: auto;
+      }
+    }
+  }
 }
 
 //Background Blue Halfscreen
@@ -214,6 +324,17 @@ form {
       font-size: 2em;
     }
   }
+  @include tablet {
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    text-align: center;
+    .footer-email {
+      .btn {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .footer-email {
@@ -245,6 +366,11 @@ form {
       font-weight: 600;
     }
   }
+  @include desktop {
+    input {
+      width: 300px;
+    }
+  }
 }
 
 // Footer Links
@@ -268,12 +394,24 @@ form {
   ul {
     list-style-type: none;
     padding-inline-start: 0;
+    padding-top: 15px;
     li {
       padding: 10px;
       cursor: pointer;
       transition: ease-in-out 0.2s;
       &:hover {
         color: #fff;
+      }
+    }
+  }
+  @include tablet {
+    display: block;
+    color: #fff;
+    .socmed {
+      text-align: center;
+      i {
+        color: #fff;
+        border: 1px solid #fff;
       }
     }
   }

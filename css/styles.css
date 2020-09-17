@@ -20,6 +20,8 @@ p {
   max-width: 1440px;
   min-width: 375px;
   margin: auto;
+  padding-left: 3em;
+  padding-right: 3em;
 }
 
 .navbar {
@@ -34,6 +36,8 @@ p {
 
 .navbar nav ul {
   text-decoration: none;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 
 .navbar nav ul li {
@@ -46,6 +50,25 @@ p {
 
 .navbar nav ul li:hover {
   color: #3c9f8f;
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding-top: 2em;
+  }
+  .navbar .logo a img {
+    margin-top: 0.8em;
+    width: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar .logo a img {
+    width: 100px;
+  }
+  .navbar nav ul li {
+    margin-left: 1em;
+  }
 }
 
 .first-sub {
@@ -84,6 +107,34 @@ p {
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .first-sub {
+    margin-top: 2em;
+  }
+  .first-sub .section-one h1 {
+    font-size: 2em;
+  }
+  .first-sub .section-one p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .first-sub {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  .first-sub .section-one {
+    max-width: 800px;
+  }
+  .first-sub .section-one p {
+    max-width: 100%;
+  }
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,6 +168,27 @@ form .btn:hover {
   color: #3065f8;
   border: 2px solid #3065f8;
   background: #fff;
+}
+
+@media (max-width: 768px) {
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: inline-block;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  form input {
+    width: 95%;
+  }
+  form .btn {
+    width: 100%;
+    margin-top: 1em;
+    margin-left: 0;
+  }
 }
 
 .second-sub {
@@ -207,6 +279,39 @@ form .btn:hover {
   width: 100%;
 }
 
+@media (max-width: 1024px) {
+  .second-sub .section-two h2 {
+    font-size: 2em;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .second-sub {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .second-sub .section-two h2 {
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 100%;
+    padding-bottom: 1em;
+  }
+  .second-sub .section-two .fylo-link {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .second-sub .section-two .fylo-link a {
+    border-bottom: 1px solid #3c9f8f;
+  }
+  .second-sub .section-two .testimonial {
+    margin: auto;
+  }
+}
+
 .bg {
   position: relative;
   background-color: #f6f6fe;
@@ -249,6 +354,22 @@ form .btn:hover {
   font-size: 2em;
 }
 
+@media (max-width: 768px) {
+  .footer-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer-container .footer-email .btn {
+    width: 100%;
+  }
+}
+
 .footer-email {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -288,6 +409,12 @@ form .btn:hover {
   font-weight: 600;
 }
 
+@media (max-width: 1024px) {
+  .footer-email input {
+    width: 300px;
+  }
+}
+
 .footer-btm .container {
   padding-top: 5em;
   padding-bottom: 2.5em;
@@ -312,6 +439,7 @@ form .btn:hover {
   list-style-type: none;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
+  padding-top: 15px;
 }
 
 .footer-links ul li {
@@ -323,6 +451,20 @@ form .btn:hover {
 
 .footer-links ul li:hover {
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer-links {
+    display: block;
+    color: #fff;
+  }
+  .footer-links .socmed {
+    text-align: center;
+  }
+  .footer-links .socmed i {
+    color: #fff;
+    border: 1px solid #fff;
+  }
 }
 
 .socmed {

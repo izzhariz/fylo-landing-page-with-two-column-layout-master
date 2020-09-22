@@ -1,21 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
 
-// ### Primary
+// Colors
 $darkBlue: hsl(243, 87%, 12%);
 $desaturatedBlue: hsl(238, 22%, 44%);
-// ### Accent
 $brightBlue: hsl(224, 93%, 58%);
 $cyan: hsl(170, 45%, 43%);
-// ### Neutral
 $grayBlue: hsl(240, 75%, 98%);
 $gray: hsl(0, 0%, 75%);
 
 // Media Queries
-//small phones
 $phones: 600px;
-// Small tablets and large smartphones (landscape view)
 $tablet: 768px;
-// Tablets and small desktops
 $desktop: 1024px;
 
 //phones
@@ -42,10 +37,7 @@ body {
   font-weight: 400;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
@@ -57,7 +49,7 @@ p {
 .container {
   max-width: 1440px;
   min-width: 375px;
-  margin: auto;
+  margin: 0 auto;
   padding-left: 3em;
   padding-right: 3em;
 }

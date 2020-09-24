@@ -8,11 +8,6 @@ $cyan: hsl(170, 45%, 43%);
 $grayBlue: hsl(240, 75%, 98%);
 $gray: hsl(0, 0%, 75%);
 
-// Media Queries
-$phones: 600px;
-$tablet: 768px;
-$desktop: 1024px;
-
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -50,10 +45,10 @@ img {
   border-radius: 5px;
   background-color: $brightBlue;
   color: #fff;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   &:hover {
-    transform: translate(0, -1px);
+    transform: translate(0, -2px);
   }
 }
 
@@ -85,7 +80,7 @@ header {
       transition: all 0.3s ease;
       white-space: nowrap;
       &:hover {
-        color: $brightBlue;
+        color: $cyan;
       }
     }
   }
@@ -173,6 +168,7 @@ section.productive {
       margin: 0 auto;
       margin-top: 3em;
       margin-bottom: 5em;
+      width: 70%;
       .icon-quotes {
         width: 1em;
       }
@@ -252,6 +248,7 @@ section.cta {
 footer {
   background-color: $veryDarkBlue;
   color: #fff;
+  padding-bottom: 2em;
   .footer-logo {
     img {
       max-width: 175px;
@@ -288,6 +285,9 @@ footer {
       cursor: pointer;
       transition: all 0.3s ease;
       margin-bottom: 0.9em;
+      &:hover {
+        color: $cyan;
+      }
     }
   }
   .socmed {
@@ -317,6 +317,294 @@ footer {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+// Media Queries
+@media screen and (min-width: 768px) {
+  .background-curve {
+    background-image: url(/images/bg-curve-desktop.svg);
+    min-height: 4em;
+  }
+  .container {
+    flex-direction: row;
+    padding: 0 2em;
+  }
+  header {
+    margin-top: 3em;
+    .container {
+      flex-direction: column;
+    }
+  }
+  section.hero {
+    text-align: left;
+    margin-top: 4em;
+    .container {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      .img-content {
+        display: flex;
+        align-items: center;
+        width: 48%;
+      }
+      .text-content {
+        width: 50%;
+        h1 {
+          margin-top: 0;
+          font-size: 1.5em;
+          margin-bottom: 0;
+        }
+        p {
+          width: 100%;
+          font-size: 0.9em;
+        }
+        .register {
+          width: 85%;
+        }
+      }
+    }
+  }
+  section.productive {
+    text-align: left;
+    .container {
+      flex-direction: row-reverse;
+      padding-top: 3em;
+      .img-content {
+        display: flex;
+        align-items: center;
+        width: 45%;
+        margin: 0 auto;
+      }
+      .text-content {
+        width: 50%;
+        h1 {
+          font-size: 1.3em;
+        }
+        .fylo-link {
+          margin: 0;
+          max-width: 140px;
+        }
+        .testimonials {
+          max-width: 70%;
+          margin: 0;
+          margin-top: 2em;
+          margin-bottom: 5em;
+          p {
+            font-size: 0.7em;
+          }
+          .user .profile {
+            .name {
+              font-size: 0.8em;
+              margin-bottom: 0;
+            }
+            .title {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+    }
+  }
+  section.cta {
+    text-align: left;
+    .container {
+      justify-content: space-between;
+      .text-content {
+        width: 55%;
+        h1 {
+          margin: 0;
+          margin-bottom: 1em;
+          margin-top: 2em;
+        }
+        p {
+          margin: 0;
+          margin-bottom: 3em;
+        }
+      }
+      .input-field {
+        width: 40%;
+        margin-top: 2em;
+        .btn {
+          width: 60%;
+        }
+      }
+    }
+  }
+  footer {
+    font-size: 0.9em;
+    .footer-logo {
+      img {
+        max-width: 140px;
+        padding-left: 2em;
+        margin-bottom: 1em;
+      }
+    }
+    .container {
+      justify-content: space-between;
+      padding: 0 2em;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  header nav a {
+    font-size: 1em;
+  }
+  section.hero {
+    .register {
+      flex-direction: row;
+      input {
+        width: 55%;
+        padding: 0.5em 1em;
+        margin-bottom: 0;
+      }
+      .btn {
+        width: 45%;
+        margin-left: 1em;
+      }
+    }
+  }
+  .text-content > p {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 4em;
+  }
+  header {
+    nav {
+      .logo {
+        max-width: 160px;
+      }
+      a {
+        font-size: 1.2em;
+        margin-left: 3.2em;
+      }
+    }
+  }
+
+  section.hero {
+    .container {
+      .text-content {
+        h1 {
+          font-size: 2.6em;
+        }
+        p {
+          font-size: 1.2em;
+          line-height: 1.4;
+          width: 90%;
+        }
+        .register {
+          width: 80%;
+          input {
+            font-size: 1.2em;
+          }
+          .btn {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  section.productive {
+    .container {
+      padding-top: 4em;
+      .text-content {
+        width: 50%;
+        h1 {
+          font-size: 2em;
+          margin-bottom: 1.2em;
+        }
+        p {
+          font-size: 1.2em;
+          width: 85%;
+        }
+        .fylo-link {
+          max-width: 180px;
+          a {
+            font-size: 1.1em;
+          }
+        }
+        .testimonials {
+          max-width: 60%;
+          padding: 2em 2.5em;
+          p {
+            font-size: 1em;
+            width: 100%;
+          }
+          .user {
+            .avatar {
+              max-width: 3em;
+            }
+            .profile {
+              p.name {
+                font-size: 1em;
+              }
+              p.title {
+                font-size: 0.9em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.cta {
+    align-items: center;
+    .text-content {
+      margin-top: 3em;
+      margin-bottom: 3em;
+      h1 {
+        font-size: 1.7em;
+      }
+      p {
+        font-size: 1em;
+        width: 75%;
+      }
+    }
+    .input-field {
+      justify-content: center;
+      input {
+        font-size: 1.2em;
+        margin-bottom: 1.2em;
+      }
+      .btn {
+        max-width: 250px;
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  footer {
+    padding-bottom: 3em;
+    font-size: 1.1em;
+    .footer-logo {
+      max-width: 1440px;
+      margin: 0 auto;
+      img {
+        max-width: 180px;
+        padding-left: 0.5em;
+        margin-top: 5em;
+        margin-bottom: 2em;
+      }
+    }
+    .container {
+      padding: 0 4em;
+      .footer-nav ul li {
+        margin-bottom: 1.5em;
+      }
+      .socmed {
+        margin: 0;
+        .icon {
+          margin-left: 1.2em;
+        }
       }
     }
   }

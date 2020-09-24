@@ -42,14 +42,14 @@ img {
   border-radius: 5px;
   background-color: #3065f8;
   color: #fff;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .btn:hover {
-  -webkit-transform: translate(0, -1px);
-          transform: translate(0, -1px);
+  -webkit-transform: translate(0, -2px);
+          transform: translate(0, -2px);
 }
 
 input {
@@ -111,7 +111,7 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #3065f8;
+  color: #3c9f8f;
 }
 
 section.hero {
@@ -236,6 +236,7 @@ section.productive .text-content .testimonials {
   margin: 0 auto;
   margin-top: 3em;
   margin-bottom: 5em;
+  width: 70%;
 }
 
 section.productive .text-content .testimonials .icon-quotes {
@@ -343,6 +344,7 @@ section.cta .input-field .btn {
 footer {
   background-color: #070439;
   color: #fff;
+  padding-bottom: 2em;
 }
 
 footer .footer-logo img {
@@ -398,6 +400,10 @@ footer .footer-nav ul li {
   margin-bottom: 0.9em;
 }
 
+footer .footer-nav ul li:hover {
+  color: #3c9f8f;
+}
+
 footer .socmed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,5 +445,299 @@ footer .socmed .icon i {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 768px) {
+  .background-curve {
+    background-image: url(/images/bg-curve-desktop.svg);
+    min-height: 4em;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 0 2em;
+  }
+  header {
+    margin-top: 3em;
+  }
+  header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.hero {
+    text-align: left;
+    margin-top: 4em;
+  }
+  section.hero .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.hero .container .img-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 48%;
+  }
+  section.hero .container .text-content {
+    width: 50%;
+  }
+  section.hero .container .text-content h1 {
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+  section.hero .container .text-content p {
+    width: 100%;
+    font-size: 0.9em;
+  }
+  section.hero .container .text-content .register {
+    width: 85%;
+  }
+  section.productive {
+    text-align: left;
+  }
+  section.productive .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    padding-top: 3em;
+  }
+  section.productive .container .img-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 45%;
+    margin: 0 auto;
+  }
+  section.productive .container .text-content {
+    width: 50%;
+  }
+  section.productive .container .text-content h1 {
+    font-size: 1.3em;
+  }
+  section.productive .container .text-content .fylo-link {
+    margin: 0;
+    max-width: 140px;
+  }
+  section.productive .container .text-content .testimonials {
+    max-width: 70%;
+    margin: 0;
+    margin-top: 2em;
+    margin-bottom: 5em;
+  }
+  section.productive .container .text-content .testimonials p {
+    font-size: 0.7em;
+  }
+  section.productive .container .text-content .testimonials .user .profile .name {
+    font-size: 0.8em;
+    margin-bottom: 0;
+  }
+  section.productive .container .text-content .testimonials .user .profile .title {
+    font-size: 0.7em;
+  }
+  section.cta {
+    text-align: left;
+  }
+  section.cta .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section.cta .container .text-content {
+    width: 55%;
+  }
+  section.cta .container .text-content h1 {
+    margin: 0;
+    margin-bottom: 1em;
+    margin-top: 2em;
+  }
+  section.cta .container .text-content p {
+    margin: 0;
+    margin-bottom: 3em;
+  }
+  section.cta .container .input-field {
+    width: 40%;
+    margin-top: 2em;
+  }
+  section.cta .container .input-field .btn {
+    width: 60%;
+  }
+  footer {
+    font-size: 0.9em;
+  }
+  footer .footer-logo img {
+    max-width: 140px;
+    padding-left: 2em;
+    margin-bottom: 1em;
+  }
+  footer .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2em;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  header nav a {
+    font-size: 1em;
+  }
+  section.hero .register {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section.hero .register input {
+    width: 55%;
+    padding: 0.5em 1em;
+    margin-bottom: 0;
+  }
+  section.hero .register .btn {
+    width: 45%;
+    margin-left: 1em;
+  }
+  .text-content > p {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 4em;
+  }
+  header nav .logo {
+    max-width: 160px;
+  }
+  header nav a {
+    font-size: 1.2em;
+    margin-left: 3.2em;
+  }
+  section.hero .container .text-content h1 {
+    font-size: 2.6em;
+  }
+  section.hero .container .text-content p {
+    font-size: 1.2em;
+    line-height: 1.4;
+    width: 90%;
+  }
+  section.hero .container .text-content .register {
+    width: 80%;
+  }
+  section.hero .container .text-content .register input {
+    font-size: 1.2em;
+  }
+  section.hero .container .text-content .register .btn {
+    font-size: 1em;
+  }
+  section.productive .container {
+    padding-top: 4em;
+  }
+  section.productive .container .text-content {
+    width: 50%;
+  }
+  section.productive .container .text-content h1 {
+    font-size: 2em;
+    margin-bottom: 1.2em;
+  }
+  section.productive .container .text-content p {
+    font-size: 1.2em;
+    width: 85%;
+  }
+  section.productive .container .text-content .fylo-link {
+    max-width: 180px;
+  }
+  section.productive .container .text-content .fylo-link a {
+    font-size: 1.1em;
+  }
+  section.productive .container .text-content .testimonials {
+    max-width: 60%;
+    padding: 2em 2.5em;
+  }
+  section.productive .container .text-content .testimonials p {
+    font-size: 1em;
+    width: 100%;
+  }
+  section.productive .container .text-content .testimonials .user .avatar {
+    max-width: 3em;
+  }
+  section.productive .container .text-content .testimonials .user .profile p.name {
+    font-size: 1em;
+  }
+  section.productive .container .text-content .testimonials .user .profile p.title {
+    font-size: 0.9em;
+  }
+  section.cta {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section.cta .text-content {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  section.cta .text-content h1 {
+    font-size: 1.7em;
+  }
+  section.cta .text-content p {
+    font-size: 1em;
+    width: 75%;
+  }
+  section.cta .input-field {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section.cta .input-field input {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+  }
+  section.cta .input-field .btn {
+    max-width: 250px;
+    font-size: 0.9em;
+  }
+  footer {
+    padding-bottom: 3em;
+    font-size: 1.1em;
+  }
+  footer .footer-logo {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  footer .footer-logo img {
+    max-width: 180px;
+    padding-left: 0.5em;
+    margin-top: 5em;
+    margin-bottom: 2em;
+  }
+  footer .container {
+    padding: 0 4em;
+  }
+  footer .container .footer-nav ul li {
+    margin-bottom: 1.5em;
+  }
+  footer .container .socmed {
+    margin: 0;
+  }
+  footer .container .socmed .icon {
+    margin-left: 1.2em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
